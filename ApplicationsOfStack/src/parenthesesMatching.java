@@ -34,7 +34,7 @@ class stack
 }
 public class parenthesesMatching extends stack {
     
-    parenthesesMatching(char[] exp)
+    public void isBalanced(char[] exp)
     {
         int i = 0;
         while(i < exp.length)
@@ -113,7 +113,9 @@ public class parenthesesMatching extends stack {
         {
             exp[i] = sc.next().charAt(0);
         }
-        parenthesesMatching obj = new parenthesesMatching(exp);
+        parenthesesMatching obj = new parenthesesMatching();
+        obj.isBalanced(exp);
+        sc.close();
     }
     
 }
